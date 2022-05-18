@@ -1,0 +1,26 @@
+<div class="container">
+
+<div class="row justify-content-center pt-5 mt-5">
+<h1>今日のおすすめミックス</h1>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">メーカ</th>
+      <th scope="col">フレーバー</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @random.each do |item| %>
+    <tr>
+      <td class="table-primary"><%= item.title %></td>
+      <td><%= item.name %></td>
+  </tbody>
+  <% end %>
+</table>
+
+<div class="row justify-content-center mt-5">
+<%= link_to 'もう一度回す', '/items',class: "btn btn-sm btn-danger"%>
+</div>
+</div>
